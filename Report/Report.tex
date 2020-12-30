@@ -5,7 +5,8 @@
 \usepackage{apacite}
 \usepackage{natbib}
 \usepackage{float}
-\usepackage{array}
+\usepackage{subfigure}
+\usepackage{array,booktabs} % Table packages
 
 \hypersetup{
     colorlinks=true,
@@ -68,17 +69,54 @@
         The images have been decompressed and converted to DICOM format. Updated ROI segmentation and bounding boxes, and pathologic diagnosis for training data are also included. The data set contains 753 calcification cases and 891 mass cases, providing a data-set size capable of analyzing decision support systems in mammography.
 
         
-        \begin{center}
-            \begin{tabular}{ | m{5em} | m{1cm}| m{1cm} | } 
-            \hline
-            cell1 dummy dummy dummy text dummy text dummy text& cell2 & cell3 \\ 
-            \hline
-            cell1 dummy text dummy text dummy text & cell5 & cell6 \\ 
-            \hline
-            cell7 & cell8 & cell9 \\ 
-            \hline
+        \begin{table}
+            \begin{tabular}{m{5cm}   m{8cm} }
+                \midrule
+                \textbf{Design Types} & -Design Types and Parallel group design.  -Feature extraction objective.  -Image processing objective \\
+                \midrule
+                \textbf{Measurement Type} & Mammography \\ 
+                \midrule
+                \textbf{Technology Type} & Digital curation \\ 
+                \midrule
+                \textbf{Factor Type} & Diagnosis \\
+                \midrule
+                \textbf{Sample Characteristic} & Homo sapiens\\
+                \midrule
             \end{tabular}
-        \end{center}
+            \caption{\label{tab:DDSM}DDSM Data Set description.}
+        \end{table}
+
+        A simple example of the image provided from the original dataset:
+
+        \begin{figure}[h]
+            \subfigure[Mass, Benign]{\includegraphics[width=3cm]{intro-masses-benign.png}}
+            \hfill
+            \subfigure[Mass, Malignant]{\includegraphics[width=3cm]{intro-masses-malign.png}}
+            \hfill
+            \subfigure[Calcification, Benign]{\includegraphics[width=3cm]{intro-calc-benign.png}}
+            \hfill
+            \subfigure[Calcification, Malignant]{\includegraphics[width=3cm]{intro-calc-malign.png}}
+            \hfill
+            \caption{Medical Image Representation}
+        \end{figure}
+         
+
+        \section{Data Records}
+        The images are distributed at the full mammography and abnormality level as DICOM files. Full mammography images include both MLO and CC views of the mammograms. Abnormalities are represented as binary mask images of the same size as their associated
+        mammograms. 
+
+        \begin{figure}[h]
+            \subfigure[Classes: Baseline patch(0), Mass, benign(1), Mass, malignant(2), Calcification, benign(3), Calcification, malignant(4)]{\includegraphics[width=7cm]{intro-dataset-class.png}}
+            \hfill
+            \subfigure[Pathology: Benign(0), Malignant(1)]{\includegraphics[width=7cm]{intro-dataset-calc-mass.png}}
+            \hfill
+            \subfigure[Pathology: Benign(0), Malignant(1)]{\includegraphics[width=7cm]{intro-dataset-calc.png}}
+            \hfill
+            \subfigure[Pathology: Benign(0), Malignant(1)]{\includegraphics[width=7cm]{intro-dataset-masses.png}}
+            \hfill
+            \caption{Data Representation}
+        \end{figure}
+
     
     As we mention previously,  \textit{CBIS DDSM:} Curated Breast Imaging Subset of Digital Database for Screening Mammography.
 
