@@ -1,0 +1,105 @@
+\documentclass{book}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{apacite}
+\usepackage{natbib}
+\usepackage{float}
+\usepackage{array}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Sharelatex Example},
+    bookmarks=true,
+    pdfpagemode=FullScreen,
+}
+
+\pagestyle{empty}
+\graphicspath{{img/}}
+\begin{document}
+    \begin{titlepage}
+        \centering
+        \includegraphics[width=6cm]{unipi.PNG}
+        \vfill
+        \vspace{1.5cm}
+        {\huge\textsc{Multimedia Information Retrieval and Computer Vision}\par}
+        {\Large
+            Educational Version\\
+            2020\\
+            \vspace{2cm}
+            A. Schiavo - M. Gómez - M. Daole \\
+            \vspace{2cm}
+            \today
+        }    
+        \vfill
+        \vfill
+    \end{titlepage}
+    \tableofcontents
+
+
+    % --------------------------------------------------------------------
+    \chapter{Introduction}
+
+    Deep learning rose to its prominent position in computer vision when neural networks started outperforming other methods on several high-profile image analysis. Healthcare providers generate and capture enormous amounts of data containing extremely valuable signals and information, at a pace far surpassing what \textit{traditional} methods of analysis can process. Machine learning therefore quickly enters the picture, as it is one of the best ways to integrate, analyze and make predictions based on large, heterogeneous data sets. 
+
+
+    % --------------------------------------------------------------------
+
+    \chapter{Convolutional Neural Network for Medical Imaging Analysis}
+
+    On this investigation, the main objective is to perform abnormality classification in mammography using Convolutional Neural Networks for Medical Imaging Analysis. This laboratory research will be development with a standart evaluation data set in the area of decision support systems in mammography, the \textit{Digital Curated Breast Imaging Subset of Database for Screening Mammography} \textbf{(CBIS DDSM)}
+    
+    \section{Original Dataset}
+        The dataset we will focus on is an updated and standardized version of the Digital Database for Screening Mammography (DDSM). The DDSM is a database of 2,620 scanned film mammography studies. It contains normal, benign, and malignant cases with verified pathology information. Few well-curated public datasets have been provided for the mammography community. These include the DDSM, the Mammographic Imaging Analysis Society (MIAS) database, and the Image Retrieval in Medical Applications (IRMA) project. Although these public data sets are useful, they are limited in terms of data set size and accessibility.
+
+        \begin{center}
+            \begin{minipage}{0.9\linewidth}
+                \vspace{5pt}%margen superior de minipage
+                {\small
+                    Lee, Rebecca Sawyer, et al. \textit{'A curated mammography data set for use in computer-aided detection and diagnosis research'} Scientific data 4 (2017): 170177.
+                }
+                \vspace{5pt}%margen inferior de la minipage
+            \end{minipage}
+        \end{center}
+
+        The images have been decompressed and converted to DICOM format. Updated ROI segmentation and bounding boxes, and pathologic diagnosis for training data are also included. The data set contains 753 calcification cases and 891 mass cases, providing a data-set size capable of analyzing decision support systems in mammography.
+
+        
+        \begin{center}
+            \begin{tabular}{ | m{5em} | m{1cm}| m{1cm} | } 
+            \hline
+            cell1 dummy text dummy text dummy text& cell2 & cell3 \\ 
+            \hline
+            cell1 dummy text dummy text dummy text & cell5 & cell6 \\ 
+            \hline
+            cell7 & cell8 & cell9 \\ 
+            \hline
+            \end{tabular}
+        \end{center}
+    
+    As we mention previously,  \textit{CBIS DDSM:} Curated Breast Imaging Subset of Digital Database for Screening Mammography.
+
+    A description of the dataset is provided in:
+
+    % --------------------------------------------------------------------
+
+    \chapter{Convolutional Neural Network from Scratch with Python}
+
+    % --------------------------------------------------------------------
+    
+    \chapter{Pre-Trained Convolutional Neural Network}
+
+    % --------------------------------------------------------------------
+
+    \chapter{Baseline Abnormality detection in mammography}
+
+    % --------------------------------------------------------------------
+
+    \chapter{Ensemble of Neural Networks}
+
+    % --------------------------------------------------------------------
+
+\end{document}
