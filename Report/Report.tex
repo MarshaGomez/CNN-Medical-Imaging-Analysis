@@ -86,6 +86,16 @@
             \caption{\label{tab:DDSM}DDSM Data Set description.}
         \end{table}
 
+        Considering the benefits of using deep learning in image classification problem (e.g., automatic feature extraction from raw data), develop a deep Convolutional Neural Network (CNN) that will be trained to read mammography images and classify them into the following five instances:
+
+        \begin{itemize}
+            \item Normal
+            \item Benign Calcification
+            \item Benign Mass
+            \item Malignant Calcification
+            \item Malignant Mass
+        \end{itemize}
+
         A simple example of the image provided from the original dataset:
 
         \begin{figure}[h]
@@ -100,7 +110,6 @@
             \caption{Medical Image Representation}
         \end{figure}
          
-
         \section{Data Records}
         The images are distributed at the full mammography and abnormality level as DICOM files. Full mammography images include both MLO and CC views of the mammograms. Abnormalities are represented as binary mask images of the same size as their associated
         mammograms. 
@@ -124,11 +133,11 @@
 
     % --------------------------------------------------------------------
 
-    \chapter{Convolutional Neural Network from Scratch with Python}
+    \chapter{CNN from Scratch with Python}
 
     % --------------------------------------------------------------------
     
-    \chapter{Pre-Trained Convolutional Neural Network}
+    \chapter{Pre-Trained CNN}
 
     % --------------------------------------------------------------------
 
@@ -137,6 +146,7 @@
     % --------------------------------------------------------------------
 
     \chapter{Ensemble of Neural Networks}
+    \section{Examples of Predictions}
 
     % --------------------------------------------------------------------
 
