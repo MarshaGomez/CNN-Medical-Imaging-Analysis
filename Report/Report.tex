@@ -44,16 +44,18 @@
     % --------------------------------------------------------------------
     \chapter{Introduction}
 
-    Deep learning rose to its prominent position in computer vision when neural networks started outperforming other methods on several high-profile image analysis. Healthcare providers generate and capture enormous amounts of data containing extremely valuable signals and information, at a pace far surpassing what \textit{traditional} methods of analysis can process. Machine learning therefore quickly enters the picture, as it is one of the best ways to integrate, analyze and make predictions based on large, heterogeneous data sets. 
-
+    Breast cancer is one of the most common types of cancer in women. Early detection and treatment can effectively improve cure rates and reduce mortality. Detecting breast cancer using mammographic images is a cost-effective technique, and radiologists can make a diagnosis by analyzing these images. However, the large number of mammographic images produced day by day has brought a huge workload on radiologists and also increased the rate of misdiagnosis. Therefore, developing a computer-aided diagnosis (CAD) system can significantly relieve the pressure on radiologists and improve the diagnosis accuracy.
+    
+    Machine learning therefore quickly enters the picture, based on large, heterogeneous data sets, the automatic analysis for mammography images needs to be analyzed and make predictions from the regions of interest and classify these regions into normal or abnormal (benign and malignant).
+    
 
     % --------------------------------------------------------------------
 
-    \chapter{Convolutional Neural Network for Medical Imaging Analysis}
+    \chapter{Convolutional Neural Network for Medical Imaging Analysis}  % -- All the images on this chapter starts with the name Introduction (intro-xxxxx.png) 
 
     On this investigation, the main objective is to perform abnormality classification in mammography using Convolutional Neural Networks for Medical Imaging Analysis. This laboratory research will be development with a standart evaluation data set in the area of decision support systems in mammography, the \textit{Digital Curated Breast Imaging Subset of Database for Screening Mammography} \textbf{(CBIS DDSM)}
     
-    \section{Original Dataset}
+        \section{Original Dataset}
         The dataset we will focus on is an updated and standardized version of the Digital Database for Screening Mammography (DDSM). The DDSM is a database of 2,620 scanned film mammography studies. It contains normal, benign, and malignant cases with verified pathology information. Few well-curated public datasets have been provided for the mammography community. These include the DDSM, the Mammographic Imaging Analysis Society (MIAS) database, and the Image Retrieval in Medical Applications (IRMA) project. Although these public data sets are useful, they are limited in terms of data set size and accessibility.
 
         \begin{center}
@@ -70,7 +72,7 @@
 
         
         \begin{table}
-            \begin{tabular}{m{5cm}   m{8cm} }
+            \begin{tabular}{m{5cm}m{8cm}}
                 \midrule
                 \textbf{Design Types} & -Design Types and Parallel group design.  -Feature extraction objective.  -Image processing objective \\
                 \midrule
@@ -96,7 +98,7 @@
             \item Malignant Mass
         \end{itemize}
 
-        A simple example of the image provided from the original dataset:
+        In the subsequent sections, data source, data preprocessing, data augmentation, model development and evaluation will be delineated. A simple example of the image provided from the original dataset:
 
         \begin{figure}[h]
             \subfigure[Mass, Benign]{\includegraphics[width=3cm]{intro-masses-benign.png}}
@@ -115,13 +117,13 @@
         mammograms. 
 
         \begin{figure}[h]
-            \subfigure[Classes: Baseline patch(0), Mass, benign(1), Mass, malignant(2), Calcification, benign(3), Calcification, malignant(4)]{\includegraphics[width=7cm]{intro-dataset-class.png}}
+            \subfigure[Classes: Baseline patch \textit{(0)}, Mass, benign (1), Mass, malignant \textit{(2)}, Calcification, benign \textit{(3)}, Calcification, malignant \textit{(4)}]{\includegraphics[width=7cm]{intro-dataset-class.png}}
             \hfill
-            \subfigure[Pathology: Benign(0), Malignant(1)]{\includegraphics[width=7cm]{intro-dataset-calc-mass.png}}
-            \hfill
-            \subfigure[Pathology: Benign(0), Malignant(1)]{\includegraphics[width=7cm]{intro-dataset-calc.png}}
-            \hfill
-            \subfigure[Pathology: Benign(0), Malignant(1)]{\includegraphics[width=7cm]{intro-dataset-masses.png}}
+            \subfigure[Pathology: Benign \textit{(0)}, Malignant \textit{(1)}]{\includegraphics[width=7cm]{intro-dataset-calc-mass.png}}
+            \hfill 
+            \subfigure[Pathology: Benign \textit{(0)}, Malignant \textit{(1)}]{\includegraphics[width=7cm]{intro-dataset-calc.png}}
+            \hfill 
+            \subfigure[Pathology: Benign \textit{(0)}, Malignant \textit{(1)}]{\includegraphics[width=7cm]{intro-dataset-masses.png}}
             \hfill
             \caption{Data Representation}
         \end{figure}
@@ -134,6 +136,16 @@
     % --------------------------------------------------------------------
 
     \chapter{CNN from Scratch with Python}
+    
+        \section{Masses and Calcifications} % -- All the images on this section starts with the name Scratch Masses and Calcifications (smc-xxxxx.png) 
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=5cm]{smc-best-model.png}
+            \caption{The schematic diagram of two biological neurons.}\label{fig:neurons}
+        \end{figure}
+
+        \section{Benign and Malignant}  % -- All the images on this section starts with the name Scratch Benign and Malignant (sbm-xxxxx.png) 
 
     % --------------------------------------------------------------------
     
