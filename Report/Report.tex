@@ -113,19 +113,9 @@
             \caption{\label{tab:DDSM}DDSM Data Set description.}
         \end{table}
 
-        Considering the benefits of using deep learning in image classification problem (e.g., automatic feature extraction from raw data), develop a deep Convolutional Neural Network (CNN) that will be trained to read mammography images and classify them into the following five instances:
-
-        \begin{itemize}
-            \item Normal
-            \item Benign Calcification
-            \item Benign Mass
-            \item Malignant Calcification
-            \item Malignant Mass
-        \end{itemize}
-
         In the subsequent sections, data source, data preprocessing, data augmentation, model development and evaluation will be delineated. A simple example of the image provided from the original dataset:
 
-        \begin{figure}[h]
+        \begin{figure}[H]
             \subfigure[Mass, Benign]{\includegraphics[width=3cm]{intro-masses-benign.png}}
             \hfill
             \subfigure[Mass, Malignant]{\includegraphics[width=3cm]{intro-masses-malign.png}}
@@ -136,6 +126,16 @@
             \hfill
             \caption{Medical Image Representation}
         \end{figure}
+
+        Considering the benefits of using deep learning in image classification problem (e.g., automatic feature extraction from raw data), develop a deep Convolutional Neural Network (CNN) that will be trained to read mammography images and classify them into the following five instances:
+
+        \begin{itemize}
+            \item Normal
+            \item Benign Calcification
+            \item Benign Mass
+            \item Malignant Calcification
+            \item Malignant Mass
+        \end{itemize}
          
         \section{Data Records}
         The images are distributed at the full mammography and abnormality level as DICOM files. Full mammography images include both MLO and CC views of the mammograms. Abnormalities are represented as binary mask images of the same size as their associated
@@ -166,11 +166,30 @@
 
             \subsection{Data Preparation}
 
+            \begin{itemize}
+                \item Data Loading
+                \item Data Reshape
+                \item Data Normalization
+                \item Splitting into Training and Validation data
+            \end{itemize}
+
             This can be easily done with the Python data manipulation. Modern deep learning provides a very powerful framework for supervised learning, we introduce on this step the convolutional network for scaling to large images.
 
             \subsection{Building CNN Architecture}
+
+            \begin{itemize}
+                \item Definition CNN Model
+                \item Data Optimizer
+            \end{itemize}
+
             \subsection{Visualization of the Data}
             \subsection{Fighting Overfitting}
+
+            \begin{itemize}
+                \item CNN Model No.1 Data Augmentation
+                \item CNN Model No.2 K-fold cross validation
+            \end{itemize}
+
             \subsection{Hyperparameter Tuning}
             \subsection{Testing the best 3 models}
             \subsection{Choose the best model}
