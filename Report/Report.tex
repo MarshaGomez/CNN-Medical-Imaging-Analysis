@@ -180,6 +180,24 @@
             \begin{itemize}
                 \item Definition CNN Model
                 \item Data Optimizer
+                
+                \begin{table}
+                    \begin{tabular}{m{1cm}m{1.5cm}m{1.8cm}m{1.5cm}m{1cm}m{1.2cm}m{1.2cm}m{1cm}m{1cm}}
+                        \midrule
+                        Test & batch size &	num epochs	& optimizer &	loss	& accuracy &	precision	& recall	& auc \\
+                        \midrule
+                        \textbf{1} & 20 &	100	& RMSprop & 0.7444	& 0.8313	& 0.8519	& 0.7718	& 0.8803 \\
+                        \midrule
+                        \textbf{2} & 20 &	100	& Adam & 0.8893	& 0.8031	& 0.7829	& 0.7987	& 0.876 \\
+                        \midrule
+                        \textbf{3} & 20 &	100	& Nadam & 0.7338	& 0.8156	& 0.7885	& 0.8255	& 0.9022 \\
+                        \midrule
+                    \end{tabular}
+                    \caption{\label{tab:DDSM}DDSM Data Set description.}
+                \end{table}
+
+                
+
             \end{itemize}
 
             \subsection{Visualization of the Data}
