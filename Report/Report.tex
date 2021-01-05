@@ -209,6 +209,16 @@
 
             \subsection{Hyperparameter Tuning}
 
+            We create a sort of experimental results, creating a manual tuning between the values: Optimizer (Adam and RMSprop) and Learning Rate (0.01, 0.001, 0.0001), Changing Batch size (20, 32, 64, 128). 
+
+            Our goal is to select the smallest loss model with good enough accuracy.
+            
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=10cm]{smc-accuracy-loss.png}
+                \caption{Results of Model Accuracy vs. Model Loss}\label{fig:acc-loss}
+            \end{figure}
+
             \begin{table}
                 \begin{center}
                     \begin{tabular}{m{1cm}m{1cm}m{2.5cm}m{1.3cm}m{1cm}m{2cm}m{2cm}m{1cm}}
@@ -240,7 +250,7 @@
                         \midrule
                     \end{tabular}
                 \end{center}
-                \caption{\label{tab:optimizer}Comparation Optimizer}
+                \caption{\label{tab:results}Results using the batch size: 20}
             \end{table}
 
             \begin{table}
@@ -275,7 +285,7 @@
                         \midrule
                     \end{tabular}
                 \end{center}
-                \caption{\label{tab:optimizer}Comparation Optimizer}
+                \caption{\label{tab:results}Results using the batch size: 32}
             \end{table}
 
             \begin{table}
@@ -310,7 +320,7 @@
                         \midrule
                     \end{tabular}
                 \end{center}
-                \caption{\label{tab:optimizer}Comparation Optimizer}
+                \caption{\label{tab:results}Results using the batch size: 64}
             \end{table}
 
             \begin{table}
@@ -345,7 +355,7 @@
                         \midrule
                     \end{tabular}
                 \end{center}
-                \caption{\label{tab:optimizer}Comparation Optimizer}
+                \caption{\label{tab:results}Results using the batch size: 128}
             \end{table}
 
             \subsection{Testing the best 3 models}
@@ -359,7 +369,7 @@
         \begin{figure}[h]
             \centering
             \includegraphics[width=5cm]{smc-best-model.png}
-            \caption{The schematic diagram of two biological neurons.}\label{fig:neurons}
+            \caption{}\label{fig:}
         \end{figure}
 
         \section{Benign and Malignant}  % -- All the images on this section starts with the name Scratch Benign and Malignant (sbm-xxxxx.png) 
